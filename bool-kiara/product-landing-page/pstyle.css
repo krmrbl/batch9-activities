@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "SVS";
+    src: url("fonts/stardew_valley-webfont.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "SVS";
+}
+
+#header {
+    background-image: url("images/sv\ night.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+#logo_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+#header-img {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+}
+
+#stardew_logo {
+    max-width: 95%;
+}
+
+.panel, .panel_layer {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.panel {
+    position: relative;
+    margin-bottom: 0px;
+    border: .1px solid transparent;
+}
+
+#layer-3a {
+    background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax3a.png');          /* small clouds */
+    animation: slide 80s linear infinite;
+    opacity: 0.3;
+}
+
+#layer-3b {
+    background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax3b.png');          /* big clouds */
+    animation: slide 80s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes slide {
+    0%   {background-position: 0px 0%;}
+    100% {background-position: 1014px 0%;}
+}
+
+#ty-box {
+    position: absolute;
+    margin: auto;
+    padding: 15px;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    display: block;
+    height: 200px;
+    width: 450px;
+    border: 10px solid transparent;
+    border-radius: 10px;
+    border-image: url("images/menu_border_noshadowtopleft.png") 33 stretch;
+    border-image-slice: 33%;
+    background-color: #A2B794;
+    color: #211E13;
+}
+
+#ty-box h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+#ty-box p {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 15px;
+}

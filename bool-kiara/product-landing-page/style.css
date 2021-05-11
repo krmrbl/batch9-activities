@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: "SVS";
+    src: url("fonts/stardew_valley-webfont.woff") format("woff");
+}
+
+:root {
+    --invert: 0;
+    --sepia: 0;
+    --saturate: 1;
+    --hueRotate: 0turn;
+    --brightness: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+#header {
+    background-image: url(https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png);
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+}
+
+#nav-bar {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    z-index: 5;
+    border: 10px solid transparent;
+    border-radius: 10px;
+    border-image: url(https://stardewvalley.net/wp-content/uploads/2017/12/menu_border_noshadowtopleft.png) 33 stretch;
+    border-image-slice: 33%;
+    background-color: #fbc571;
+}
+
+.nav-link {
+    font-family: "SVS";
+    font-size: 24px;
+    text-decoration: none;
+    color: #56160C;
+    display: flex;
+    align-items: center;
+}
+
+#p1, #p2 {
+    width: 35%;
+    display: flex;
+}
+
+#p1 {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#p2 {
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+}
+
+#header-img {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+}
+
+#stardew_logo {
+    max-width: 95%;
+}
+
+.panel, .panel_layer {
+    height: 110vh;
+    width: 100%;
+    position: absolute;
+}
+
+.panel {
+    position: relative;
+    margin-bottom: 0px;
+    border: .1px solid transparent;
+}
+
+#layer-3a {
+    background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax3a.png');          /* small clouds */
+    animation: slide 80s linear infinite;
+    opacity: 0.3;
+}
+
+#layer-3b {
+    background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax3b.png');          /* big clouds */
+    animation: slide 80s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes slide {
+    0%   {background-position: 0px 0%;}
+    100% {background-position: 1014px 0%;}
+}
+
+/* about */
+
+#section-about {
+    margin-top: -70px;
+    padding: 70px 50px 50px 50px;
+    height: 110vh;
+    background-image: url("images/abt\ bg.png");
+    background-size: cover;
+    position: relative;
+    z-index: 4;
+}
+
+#abt-desc-1 {
+    margin: 30px;
+    text-align: justify;
+    font-family: "SVS";
+    font-size: 40px;
+    color: #56160C;
+}
+
+#abt-desc-2 {
+    margin: 30px;
+    text-align: center;
+    font-family: "SVS";
+    font-size: 40px;
+    color: #56160C;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-name {
+    margin: 0;
+    text-align: center;
+    font-family: "SVS";
+    font-size: 24px;
+    color: #56160C;
+    display: none;
+    transition: 0.5s;
+}
+
+.logo-title a img {
+    text-align: center;
+    width: 100px;
+    transition: 0.5s;
+}
+
+.logo-title a {
+    text-align: center;
+}
+
+.logo-title a img:hover {
+    transform: scale(1.3);
+    box-shadow: 5px 5px 5px #C17C3C;
+}
+
+.logo-title:hover .logo-name {
+    display: block;
+    margin-top: 30px;
+}
+
+/* features */
+
+#section-features {
+    padding: 120px 50px 50px 50px;
+    height: 110vh;
+    background-image: url("images/ft\ bg.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+}
+
+#container {
+    margin: auto;
+    width: 960px;
+    height: 580px;
+    background: black;
+    background-image: url("images/container.png");
+    background-size: 960px 580px;
+    box-shadow: 10px 10px 5px #C17C3C;
+    display: flex;
+    flex-direction: column;
+}
+
+#slides-container {
+    position: relative;
+    height: 540px;
+    width: 930px;
+    background: #fbc571;
+    margin: 0px 15px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.btn-box {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.back-btn {
+    margin: 0px 10px;
+    width: 40px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.next-btn {
+    margin: 0px 10px;
+    width: 40px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.next-btn:hover, .back-btn:hover {
+    transform: scale(1.3);
+}
+
+
+.img-desc {
+    margin: 5px;
+    padding: 10px;
+    font-family: "SVS";
+    font-size: 24px;
+    color: #56160C;
+    text-align: center;
+}
+
+#s1 {
+    position: absolute;
+    transition: 0.3s;
+}
+
+#s2, #s3, #s4, #s5, #s6 {
+    position: absolute;
+    top: 0;
+    left: 1100px;
+    transition: 0.3s;
+}
+
+/* getting started */
+#section-gs {
+    padding: 70px 50px 50px 50px;
+    height: 110vh;
+    background-image: url("images/gs\ bg.png");
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+
+#section-desc {
+    margin: 30px;
+    text-align: justify;
+    font-family: "SVS";
+    font-size: 32px;
+    color: #56160C;
+}
+
+#section-desc a {
+    color: red;
+    text-decoration: none;
+}
+
+#section-desc a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+#vids-container {
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+iframe {
+    box-shadow: 10px 10px 5px #C17C3C;
+}
+
+/* contact */
+#section-contact {
+    margin-top: -75px;
+    height: 110vh;
+    position: relative;
+    z-index: 1;
+}
+
+#sc-header {
+    margin: 0;
+    height: 450px;
+    width: 100%;
+    background-image: url("images/eb\ header.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#sc-header-title h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 5px;
+}
+
+#sc-header-links {
+    letter-spacing: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.social-icons {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.social-icons:hover {
+    filter: invert(0.4) sepia(1) saturate(2.1) brightness(1.2);
+    transform: scale(1.3);
+}
+
+#sc-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)),url("images/eb\ bg.jpg");
+    background-size: cover;
+}
+
+#sc-content b {
+    color: #39240c;
+}
+
+#sc-content-1 {
+    margin: 10px 5px 10px 10px;
+    width: 70%;
+}
+
+#sc-content-2 {
+    margin: 10px 10px 10px 5px;
+    width: 30%;
+}
+
+#sc-content-1, #sc-content-2 {
+    padding: 15px;
+    border: 2px #39240c;
+    border-style: solid;
+    height: 610px;
+}
+
+.sc-heading {
+    padding-left: 15px;
+    border: 5px #39240c;
+    border-left-style: solid;
+    color: #39240c;
+}
+
+.sc-desc {
+    padding-left: 20px;
+    padding-top: 5px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.sc-desc a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #39240c;
+}
+
+#contact label {
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+#name, #email {
+    display: block;
+    margin-left: 20px;
+    width: 90%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#name:focus, #email:focus, #message:focus {
+    background: #fbc571;
+    color: black;
+}
+
+#message {
+    margin-left: 20px;
+    width: 90%;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+::placeholder {
+    font-family: "Poppins";
+    text-align: center;
+}
+
+#s-btn-box {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#s-btn {
+    width: 80px;
+    padding: 2px;
+    font-family: "Poppins";
+    color: #767676;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+
+#s-btn:hover {
+    background: #fbc571;
+    color: black;
+}
+
+/* media queries */
+
+@media (max-width: 1200px) {
+    #p1, #p2 {
+        width: 50%;
+    }
+
+    #container {
+        width: 760px;
+        height: 480px;
+        background-size: 760px 480px;
+    }
+
+    #section-features {
+        height: 90vh;
+    }
+
+    #slides-container {
+        width: 730px;
+        height: 440px;
+    }
+
+    #slides-container img {
+        width: 100%;
+    }
+
+    #s1, #s2, #s3, #s4, #s5, #s6 {
+        width: 100%;
+    }
+
+    #sc-content-1, #sc-content-2 {
+        height: 750px;
+    }
+
+    #section-gs {
+        height: 130vh;
+    }
+
+    #section-contact {
+        margin-top: -90px;
+    }
+}
+
+@media (max-width: 975px) {
+    .nav-link {
+        font-size: 20px;
+    }
+
+    #p1, #p2 {
+        width: 100%;
+    }
+
+    #abt-desc-1, #abt-desc-2 {
+        font-size: 35px;
+    }
+
+    #section-features {
+        height: 90vh;
+    }
+
+    #container {
+        width: 760px;
+        height: 480px;
+        background-size: 760px 480px;
+    }
+
+    #slides-container {
+        width: 730px;
+        height: 440px;
+    }
+
+    #slides-container img {
+        width: 100%;
+    }
+
+    #s1, #s2, #s3, #s4, #s5, #s6 {
+        width: 100%;
+    }
+
+    #section-gs {
+        height: 160vh;
+    }
+    
+    #vids-container {
+        flex-wrap: wrap;
+    }
+
+    iframe {
+        margin: 10px;
+    }
+
+    #section-contact {
+        margin-top: -120px;
+    }
+
+    #sc-content-1, #sc-content-2 {
+        height: 810px;
+    }
+
+    .sc-desc {
+        font-size: 14px;
+    }
+
+    #name, #email, #message {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 600px) {
+    #section-gs {
+        height: 150vh;
+    }
+}
