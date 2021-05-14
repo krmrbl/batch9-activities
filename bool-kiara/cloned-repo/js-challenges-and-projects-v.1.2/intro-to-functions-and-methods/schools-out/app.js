@@ -1,5 +1,5 @@
-function sendText( ) {
-    //Write your code here.
+function sendText(name, lastName) {
+    console.log('Hi, ' + name + ' ' + lastName + '! School is canceled for the day!');
 }
 sendText()
 
