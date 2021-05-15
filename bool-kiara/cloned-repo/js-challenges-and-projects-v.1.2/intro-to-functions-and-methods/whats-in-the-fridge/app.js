@@ -3,8 +3,8 @@ const upButton = document.querySelector('#up')
 const buyListDisplay = document.querySelector('#first-list')
 const fridgeListDisplay = document.querySelector('#second-list')
 
-const buyList = ['chicharon', 'buko pie', 'mango', 'bacon' ]
-const fridge = []
+const buyList = ['chicharon', 'buko pie', 'mango', 'bacon']
+const fridge = ['eggs', 'kimchi', 'softdrinks', 'mayonnaise']
 
 //Challenge: Please fill the fridge array with 5 items of your choice. 
 
@@ -17,7 +17,12 @@ const fridge = []
 //and put it in the buyList, on the press of the moveUp button.
 
 function moveUp(){
-    //your code
+    if(fridge.length > 0) {
+        buyList.push(fridge[0]);
+        fridge.shift();
+        buyListDisplay.innerHTML = buyList;
+        fridgeListDisplay.innerHTML = fridge;
+    }
 }
 
 upButton.addEventListener('click', moveUp)
@@ -26,7 +31,12 @@ upButton.addEventListener('click', moveUp)
 //and put it in the fridge.
 
 function moveDown(){
-    //your code
+    if(buyList.length > 0) {
+        fridge.push(buyList[buyList.length-1]);
+        buyList.pop(fridge[0]);
+        buyListDisplay.innerHTML = buyList;
+        fridgeListDisplay.innerHTML = fridge;
+    }
 }
 
 downButton.addEventListener('click', moveDown)
