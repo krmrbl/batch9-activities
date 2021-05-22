@@ -1,0 +1,694 @@
+@font-face {
+    font-family: "fReg";
+    src: url("fonts/NHaasGroteskTXPro-55Rg.woff") format("woff");
+}
+
+@font-face {
+    font-family: "fMed";
+    src: url("fonts/NHaasGroteskTXPro-65Md.woff") format("woff");
+}
+
+@font-face {
+    font-family: "fBold";
+    src: url("fonts/NHaasGroteskTXPro-75Bd.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/bg1.jpg");
+    background-size: cover;
+    transition: 0.3s;
+}
+
+/* Containers */
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 40px 1fr 150px 70px 1fr 70px 40px 80px 1fr 55px / repeat(6, 1fr);
+}
+
+#container div {
+    text-align: center;
+    color: white;
+}
+
+#temp-container {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    font-family: 'fReg';
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.8px 0.8px 1px black;
+}
+
+#date-container {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+    font-family: 'fMed';
+    font-size: 40px;
+    display: grid;
+    align-items: center;
+    text-shadow: 0.8px 0.8px 5px black;
+}
+
+#todo-container {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+    font-family: 'fReg';
+    font-size: 15px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0.8px 0.8px 1px black;
+}
+
+#time-container {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 1;
+    font-family: 'fMed';
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.8px 0.8px 5px black;
+}
+
+#greeting-container {
+    margin-top: -20px;
+    grid-column: 2 / span 4;
+    grid-row: 6 / span 1;
+    font-family: 'fMed';
+    font-size: 50px;
+    text-shadow: 0.8px 0.8px 5px black;
+}
+
+#focus-container {
+    grid-column: 2 / span 4;
+    grid-row: 8 / span 1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0.8px 0.8px 5px black;
+}
+
+#quotes-container {
+    grid-column: 1 / span 6;
+    grid-row: 10 / span 1;
+    font-family: 'fReg';
+    font-size: 15px;
+    display: grid;
+    align-items: center;
+    text-shadow: 0.8px 0.8px 1px black;
+}
+
+/* Greeting */
+#edit-icon {
+    filter: invert();
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+    display: none;
+}
+
+#greeting-container:hover #edit-icon {
+    display: initial;
+}
+
+#edit-icon:hover {
+    background: rgba(255,255,255,0.3)
+}
+
+/* Theme */
+#temp-trigger {
+    cursor: pointer;
+}
+
+#next-theme {
+    filter: invert() drop-shadow(1px 1px black);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none;
+}
+
+#temp-container:hover #next-theme {
+    display: initial;
+}
+
+/* Name */
+#name {
+    outline-style: none;
+    text-transform: capitalize;
+}
+
+/* Focus */
+#focus-question {
+    font-family: 'fReg';
+    font-size: 30px;
+}
+
+#focus-answer {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: white;
+    font-family: 'fReg';
+    font-size: 25px;
+    text-align: center;
+    outline-style: none;
+    width: 100%;
+}
+
+.mfocus-container {
+    grid-column: 2 / span 4;
+    grid-row: 8 / span 1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#mfocus-title {
+    font-family: 'fMed';
+    font-size: 18px;
+}
+
+#mfocus-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mfocus-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    display: none;
+}
+
+#mfocus-input {
+    font-family: 'fReg';
+    font-size: 37px;
+}
+
+#mfocus-remove {
+    transform: rotate(45deg);
+    filter: invert();
+    margin-left: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.mfocus-container:hover #mfocus-checkbox {
+    display: initial;
+}
+
+.mfocus-container:hover #mfocus-remove {
+    display: initial;
+}
+
+/* Quotes */
+#quotes-text {
+    position: relative;
+    display: inline-block;
+}
+
+#quotes-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.1s ease-in 25ms;
+    margin-top: -15px;
+}
+
+#quotes-container:hover #quotes-container-2 {
+    opacity: 1;
+    height: auto;
+}
+
+#add-quote-icon {
+    transform: scale(0.5);
+    filter: invert() drop-shadow(1px 1px black);
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.add-quotes-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 5;
+    z-index: 1; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8);
+    visibility: hidden;
+}
+
+#add-quotes-box {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    display: grid;
+    border-radius: 10px;
+}
+
+#add-quotes-box label {
+    margin-bottom: 2px;
+    text-align: left;
+    font-family: 'FMed';
+    font-size: 18px;
+    color: black;
+}
+
+#new-quote, #new-quote-author {
+    font-family: 'FReg';
+    font-size: 16px;
+    padding: 5px;
+}
+
+#new-quote:focus, #new-quote-author:focus {
+    background: rgb(223, 223, 223);
+}
+
+.example {
+    margin-top: 2px;
+    text-align: left;
+    font-family: 'FReg';
+    font-size: 12px;
+    color: black;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-submit, #quote-cancel {
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+    font-family: 'FReg';
+    color: white;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+#quote-submit {
+    background: #1fae51;
+}
+
+#quote-cancel {
+    background: #d72503;
+}
+
+/* ToDo */
+#todo-trigger {
+    cursor: pointer;
+}
+
+.popup-container {
+    width: 300px;
+    height: auto;
+    max-height: 80vh; 
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 1.5vw;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.popup-container::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 72%;
+    margin-left: -18px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent white;
+}
+
+#todo-title {
+    margin-bottom: 5px;
+    text-align: left;
+    font-family: 'FMed';
+    font-size: 18px;
+    color: black;
+}
+
+#todo-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-family: 'FReg';
+    font-size: 16px;
+    outline-style: none;
+}
+
+.input-wrapper {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.input-text {
+    text-align: left;
+    height: auto;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline-style: none;
+    color: black;
+    font-family: 'FReg';
+    font-size: 14px;
+}
+
+.input-text:focus {
+    border-bottom: 1px solid #000;
+}
+
+
+.todo-done-icon {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.input-wrapper .input-remove-icon {
+    display: block;
+    height: 16px;
+    width: 16px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.input-wrapper:hover .input-remove-icon, .input-wrapper:hover .todo-done-icon {
+    visibility: visible;
+}
+
+/* Front Page */
+#front-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 5;
+    z-index: 1; 
+    overflow: auto; 
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)),url("images/bg1.jpg");
+    background-size: cover;
+    text-shadow: 0.8px 0.8px 5px black;
+}
+
+#front-box {
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+    background: transparent;
+    padding: 15px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#question {
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'FBold';
+    font-size: 50px;
+    color: white;
+}
+
+#answer {
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline-style: none;
+    color: white;
+    font-family: 'FReg';
+    font-size: 50px;
+}
+
+/* For toggling */
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.show-faster {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.hide {
+    visibility: hidden;
+    height: 0;
+}
+
+.none {
+    display: none;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 900px) {
+    #temp-container, #todo-container, #quotes-container {
+        font-size: 12px;
+    }
+
+    #date-container {
+        margin-top: -100px;
+        font-size: 20px;
+    }
+
+    #next-theme {
+        width: 8px;
+        height: 8px;
+    }
+
+    .popup-container {
+        width: 150px;
+    }
+
+    #todo-title {
+        font-size: 16px;
+    }
+    
+    #todo-input {
+        font-size: 14px;
+    }
+
+    #time-container {
+        font-size: 75px;
+    }
+
+    #greeting-container {
+        margin-top: -50px;
+        font-size: 25px;
+    }
+
+    #edit-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .input-text {
+        font-size: 12px;
+    }
+
+    #focus-question {
+        font-size: 15px;
+    }
+    
+    #focus-answer {
+        font-size: 12.5px;
+        width: 100%;
+        padding: 5px;
+        margin-top: -20px;
+    }
+
+    #mfocus-title {
+        font-size: 12px;
+    }
+    
+    #mfocus-checkbox, #mfocus-remove {
+        width: 12px;
+        height: 12px;
+    }
+    
+    #mfocus-input {
+        font-family: 'fReg';
+        font-size: 20px;
+    }
+    
+    #add-quote-icon {
+        transform: scale(0.4);
+        filter: invert() drop-shadow(2px 2px black);
+    }
+
+    #add-quotes-box {
+        width: 350px;
+        height: 300px;
+        margin: auto;
+    }
+
+    #add-quotes-box label {
+        font-size: 16px;
+    }
+    
+    #new-quote, #new-quote-author {
+        font-family: 'FReg';
+        font-size: 14px;
+    }
+    
+    .example {
+        font-size: 10px;
+    }
+    
+    #quote-submit, #quote-cancel {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    #front-box {
+        width: 100vw;
+        height: 200px;
+    }
+
+    #question, #answer {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #temp-container, #todo-container, #quotes-container {
+        font-size: 10px;
+    }
+
+    #date-container {
+        margin-top: -100px;
+        font-size: 18px;
+        grid-column: 1 / span 6;
+    }
+
+    #next-theme {
+        width: 6px;
+        height: 6px;
+    }
+
+    #todo-title {
+        font-size: 14px;
+    }
+    
+    #todo-input {
+        font-size: 12px;
+    }
+
+    #time-container {
+        font-size: 45px;
+    }
+
+    #greeting-container {
+        margin-top: -50px;
+        font-size: 18px;
+    }
+
+    #edit-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    #add-quote-icon {
+        transform: scale(0.3);
+        filter: invert() drop-shadow(3px 3px black);
+    }
+
+    #add-quotes-box {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+
+    #add-quotes-box label {
+        font-size: 14px;
+    }
+    
+    #new-quote, #new-quote-author {
+        padding: 2px;
+        font-family: 'FReg';
+        font-size: 12px;
+        height: 12px;
+    }
+    
+    .example {
+        font-size: 8px;
+    }
+    
+    #quote-submit, #quote-cancel {
+        height: 20px;
+        width: 80px;
+        font-size: 10px;
+    }
+
+    #front-box {
+        width: 100vw;
+        height: 200px;
+    }
+
+    #question, #answer {
+        font-size: 25px;
+    }
+}

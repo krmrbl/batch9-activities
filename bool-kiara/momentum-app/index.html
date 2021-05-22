@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icon.png">
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body id="main">
+    <div id="container">
+        <div id="temp-container">
+            <span id="temp-trigger">Themes</span>
+            <img id="next-theme" title="Next" src="images/arrow icon.svg">
+        </div>
+        <div id="date-container"></div>
+        <div id="todo-container">
+            <p id="todo-trigger">ToDo</p>
+        </div>
+        <span class="popup-container">
+            <p id="todo-title"></p>
+            <div class="todo-list-container"></div>
+            <input type="text" id="todo-input" placeholder="New ToDo">
+        </span>
+        <div id="time-container"></div>
+        <div id="greeting-container">
+            <span id="greeting"></span>
+            <span id="name" contenteditable="true"></span><span>!</span>
+            <img id="edit-icon" title="Change Name" src="images/edit icon.svg">
+        </div>
+        <div id="focus-container">
+            <p id="focus-question"></p>
+            <input id="focus-answer">
+        </div>
+        <div class="mfocus-container">
+            <p id="mfocus-title"></p>
+            <div id="mfocus-input-container">
+                <input id="mfocus-checkbox" type="checkbox">
+                <span id="mfocus-input"></span>
+                <img id="mfocus-remove" title="Remove" src="images/plus icon.svg">
+            </div>
+        </div>
+        <div id="quotes-container">
+            <p id="quotes-text"></p>
+            <p id="quotes-container-2">
+                <span id="quotes-author"></span>
+                <img id="add-quote-icon" title="Add a Quote" src="images/plus icon.svg">
+            </p>
+        </div>
+        <div class="add-quotes-container">
+            <div id="add-quotes-box">
+                <label for="new-quote">Quote:</label>
+                <textarea id="new-quote" name="Quote"></textarea>
+                <p class="example"><b>Example:</b> I came through and I shall return.</p><br>
+                <label for="new-quote-author">Author:</label>
+                <input type="text" id="new-quote-author" name="Author">
+                <p class="example"><b>Example:</b> General Douglas MacArthur</p><br>
+                <div class="btn-box">
+                    <button id="quote-submit">Add Quote</button>
+                    <button id="quote-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="front-page">
+        <div id="front-box">
+            <p id="question">Welcome, stranger! What's your name?</p>
+            <input id="answer">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
