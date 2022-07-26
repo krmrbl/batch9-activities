@@ -1,22 +1,22 @@
 # batch9-activities
 
-# JENNIE: Tribute Page
+## JENNIE: Tribute Page
 https://krmrbl.github.io/batch9-activities/bool-kiara/tribute-page/index.html
 
-# VACCINE SIDE EFFECTS: Survey Form
+## VACCINE SIDE EFFECTS: Survey Form
 https://krmrbl.github.io/batch9-activities/bool-kiara/survey-form/index.html
 
-# FLEX: Chessboard
+## FLEX: Chessboard
 https://krmrbl.github.io/batch9-activities/bool-kiara/chessboard/index-f.html
 
-# GRID: Chessboard
+## GRID: Chessboard
 https://krmrbl.github.io/batch9-activities/bool-kiara/chessboard/index-f.html
 
-# STARDEW VALLEY: Product Landing Page
+## STARDEW VALLEY: Product Landing Page
 https://krmrbl.github.io/batch9-activities/bool-kiara/product-landing-page/index.html
 
-# Momentum App
+## Momentum App
 https://krmrbl.github.io/batch9-activities/bool-kiara/momentum-app/index.html
 
-# Tic Tac Toe
+## Tic Tac Toe
 https://krmrbl.github.io/batch9-activities/bool-kiara/tic-tac-toe/index.html#top
