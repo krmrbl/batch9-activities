@@ -19,4 +19,4 @@ https://krmrbl.github.io/batch9-activities/bool-kiara/product-landing-page/index
 https://krmrbl.github.io/batch9-activities/bool-kiara/momentum-app/index.html
 
 ## Tic Tac Toe
-https://krmrbl.github.io/batch9-activities/bool-kiara/tic-tac-toe/index.html#top
+https://krmrbl.github.io/batch9-activities/bool-kiara/tic-tac-toe/index.html
