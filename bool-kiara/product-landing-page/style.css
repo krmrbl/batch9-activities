@@ -119,8 +119,8 @@
 /* about */
 
 #section-about {
-    margin-top: -70px;
-    padding: 70px 50px 50px 50px;
+    margin-top: -100px;
+    padding: 200px 50px 50px 50px;
     height: 110vh;
     background-image: url("images/abt\ bg.png");
     background-size: cover;
